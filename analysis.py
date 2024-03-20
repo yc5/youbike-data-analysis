@@ -16,7 +16,10 @@ if __name__ == "__main__":
         try:
             with open(file, "r") as f:
                 data = json.load(f)
-                station = [x for x in data if station_name in x["sna"]][0]
+                station = [x for x in data if station_name in x["sna"]]
+                if len(station) == 0:
+                    raise Exception("Station Name Not Found")
+                station = station[0]
                 print(station["sbi"], end="")
                 print(",", end="")
                 print(station["bemp"], end="")
@@ -29,3 +32,6 @@ if __name__ == "__main__":
                 print()
         except FileNotFoundError:
             print(f"Error: File '{file}' not found.")
+        except Exception as e:
+            print(e)
+            break
