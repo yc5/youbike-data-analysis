@@ -24,7 +24,7 @@ if __name__ == "__main__":
                 print(",", end="")
                 print(station["srcUpdateTime"], end="")
                 print(",", end="")
-                percentage = round(station["sbi"] / station["tot"], 1)
+                percentage = station["sbi"] / station["tot"]
                 percentage_len = 50
                 percentage_str = "*" * int(percentage * percentage_len)
                 print(percentage_str.ljust(percentage_len, "-"), end="")
