@@ -27,9 +27,15 @@ if __name__ == "__main__":
                 print(station["tot"], end="")
                 print(",", end="")
                 print(station["sbi"], end="")
+                print(",", end="")
+                percentage = round(station["sbi"] / station["tot"], 1)
+                percentage_len = 50
+                percentage_str = "*" * int(percentage * percentage_len)
+                print(percentage_str.ljust(percentage_len, "-"), end="")
+
                 print()
         except FileNotFoundError:
             print(f"Error: File '{file}' not found.")
         except Exception as e:
             print(e)
-            #break
+            # break
