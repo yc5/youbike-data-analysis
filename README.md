@@ -17,3 +17,9 @@
 ```bash
  python analysis.py --name "公館站(2號出口)"
 ```
+
+比較兩站數量變化
+
+```bash
+ python analysis.py --name "公館站(2號出口)" --control "臺灣科技大學側門"
+```
