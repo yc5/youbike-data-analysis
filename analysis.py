@@ -32,4 +32,4 @@ if __name__ == "__main__":
             print(f"Error: File '{file}' not found.")
         except Exception as e:
             print(e)
-            break
+            #break
