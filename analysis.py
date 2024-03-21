@@ -20,15 +20,13 @@ if __name__ == "__main__":
                 if len(station) == 0:
                     raise Exception("Station Name Not Found")
                 station = station[0]
-                print(station["sbi"], end="")
-                print(",", end="")
-                print(station["bemp"], end="")
-                print(",", end="")
-                print(station["tot"], end="")
+                print(station["sna"], end="")
                 print(",", end="")
                 print(station["srcUpdateTime"], end="")
                 print(",", end="")
-                print(station["sna"], end="")
+                print(station["tot"], end="")
+                print(",", end="")
+                print(station["sbi"], end="")
                 print()
         except FileNotFoundError:
             print(f"Error: File '{file}' not found.")
